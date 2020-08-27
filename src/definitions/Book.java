@@ -7,4 +7,19 @@
 package definitions;
 
 public class Book {
+    private String bookName;
+    private String authorNameOfTheBook;
+    private String ISBNNumberOfTheBook;
+
+    public String getBookName() {
+        return bookName;
+    }
+
+    public String getAuthorNameOfTheBook() {
+        return authorNameOfTheBook;
+    }
+
+    public String getISBNNumberOfTheBook() {
+        return ISBNNumberOfTheBook;
+    }
 }
