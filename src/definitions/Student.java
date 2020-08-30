@@ -52,4 +52,29 @@ public class Student {
     public void setBooksIssueByTheStudent(int booksIssueByTheStudent) {
         this.booksIssueByTheStudent = booksIssueByTheStudent;
     }
+
+    public Student() {
+        this.firstName = "";
+        this.middleName = "";
+        this.lastName = "";
+        this.universityRollNumber = 0;
+        this.booksIssueByTheStudent = 0;
+    }
+
+    public Student(String firstName, String middleName, String lastName, long universityRollNumber, int booksIssueByTheStudent) {
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.universityRollNumber = universityRollNumber;
+        this.booksIssueByTheStudent = booksIssueByTheStudent;
+    }
+
+    public Student(String firstName) {
+        this.firstName = firstName;
+        this.middleName = "J";
+        this.lastName = "Singh";
+        this.universityRollNumber = 191500;
+        this.booksIssueByTheStudent = 0;
+    }
+
 }
