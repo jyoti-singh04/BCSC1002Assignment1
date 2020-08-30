@@ -28,7 +28,27 @@ public class FrontDesk {
             System.out.println("3. Show me all my issues books.");
             System.out.println("4. Exit: ");
             System.out.println("Enter your choice: ");
+            clientInput = scanner.nextInt();
+            String bookName;
+            int rating;
+            switch (clientInput) {
+                case ISSUE_A_NEW_BOOK_FOR_ME:
+                    System.out.println("Enter the name of the book that you want to issue: ");
+                    scanner.nextLine();
+                    bookName = scanner.nextLine();
+                    myLibrary.addBook(bookName);
+                    break;
+                case RETURN_A_NEW_BOOK_FOR_ME:
+                    System.out.println("Enter the name of the book you want to return: ");
+                    scanner.nextLine();
+                    bookName = scanner.nextLine();
+                    myLibrary.doReturn(bookName);
+                    break;
+                case SHOW_ME_ALL_MY_ISSUES_BOOK_FOR_ME:
+                    myLibrary.listBook();
+                    break;
+                default:
+            }
         }
 
     }
-}
