@@ -52,4 +52,12 @@ public class Book {
     public void setISBNNumberOfTheBook(String ISBNNumberOfTheBook) {
         this.ISBNNumberOfTheBook = ISBNNumberOfTheBook;
     }
+
+    public String toString() {
+        return String.format(
+                "Book Name: %s, Book AuthorNameOfTheBook: %s, Book ISBN Number: %b",
+                getBookName(), getAuthorNameOfTheBook(), getISBNNumberOfTheBook()
+        );
+    }
+
 }
