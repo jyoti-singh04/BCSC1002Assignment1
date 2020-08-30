@@ -6,6 +6,8 @@
  * */
 package definitions;
 
+import java.util.Objects;
+
 public class Student {
     private String firstName;
     private String middleName;
@@ -84,4 +86,24 @@ public class Student {
         );
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || this.getClass() != o.getClass()) {
+            return false;
+        }
+        Student student = (Student) o;
+        return this.getMiddleName().equals(student.getMiddleName()) &&
+                this.getLastName().equals(student.getLastName()) &&
+                this.getUniversityRollNumber() == student.getUniversityRollNumber() &&
+                this.getBooksIssueByTheStudent() == student.getBooksIssueByTheStudent() &&
+                this.getFirstName().equals(student.getFirstName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getFirstName(), getMiddleName(), getLastName(), getUniversityRollNumber(), getBooksIssueByTheStudent());
+    }
 }
