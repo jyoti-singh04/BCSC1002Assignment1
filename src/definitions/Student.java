@@ -77,4 +77,11 @@ public class Student {
         this.booksIssueByTheStudent = 0;
     }
 
+    public String toString() {
+        return String.format(
+                "Student FirstName: %s, Student MiddleName: %s, Student LastName: %s, Student UniversityRollNumber: %d, Student BooksIssueByTheStudent: %d",
+                getFirstName(), getMiddleName(), getLastName(), getUniversityRollNumber(), getBooksIssueByTheStudent()
+        );
+    }
+
 }
