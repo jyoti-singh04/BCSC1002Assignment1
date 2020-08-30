@@ -24,4 +24,21 @@ public class Library {
         return Arrays.toString(store);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Library that = (Library) o;
+        return Arrays.equals(getStore(), that.getStore());
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(getStore());
+    }
+
 }
