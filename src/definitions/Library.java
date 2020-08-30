@@ -11,10 +11,33 @@ import java.util.Arrays;
 public class Library {
     private Book[] store;
 
+    public Library() {
+        this.store = new Book[5];
+        for (int i = 0; i < store.length; i++) {
+            store[i] = new Book("Book " + (i + 1));
+        }
+    }
+
+    public Library(Book[] store) {
+        this.store = store;
+    }
+
+    public void addBook(String name) {
+        System.out.println(name + " is now issued.");
+    }
+
+    public void doReturn(String name) {
+        System.out.println("Thank you for returning.");
+    }
+
     public void listBook() {
         for (Book book : store) {
             System.out.println(book);
         }
+    }
+
+    public void issueBook(String name, int rating) {
+        System.out.println("The " + name + "\" is issued to you.");
     }
 
     public Book[] getStore() {
