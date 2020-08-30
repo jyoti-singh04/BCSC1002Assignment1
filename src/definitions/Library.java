@@ -11,6 +11,12 @@ import java.util.Arrays;
 public class Library {
     private Book[] store;
 
+    public void listBook() {
+        for (Book book : store) {
+            System.out.println(book);
+        }
+    }
+
     public Book[] getStore() {
         return store.clone();
     }
